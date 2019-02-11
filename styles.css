@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+
+body{
+    width: 550px;
+    margin: auto;
+    background: #FEE9E1;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    border-bottom: 1px solid black ;
+}
+
+.Square {
+    height: 80px;
+    width: 100px;
+    font-size: 45pt; 
+    text-align: center;
+    
+}
+#message {
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px
+}
+.Table {
+    width:100%
+}
