@@ -1,6 +1,8 @@
 
+let turn = "X";
+let result = false;
+
 function startGame () {
-    turn = "X";
     setMessage(turn + " Gets to start")
 }
 function setMessage(msg){
@@ -29,7 +31,6 @@ else {
     }
 }
 function checkForWinner(move) {
-    let result = false;
     if (
       checkRow(1, 2, 3, move) ||
       checkRow(4, 5, 6, move) ||
@@ -45,13 +46,12 @@ function checkForWinner(move) {
     return result;
   }
 function checkRow(a,b,c, move){
-let result = false;
 if (getBox(a) == move && getBox(b) == move && getBox(c) == move){
     result = true;
 }
 return result; 
 }
 
-function getBox(){
+function getBox(number){
     return document.getElementById("s" + number).innerText;
 }
