@@ -1,6 +1,7 @@
 
 let turn = "X";
 let result = false;
+winner = null;
 
 function startGame () {
     setMessage(turn + " Gets to start")
@@ -9,7 +10,9 @@ function setMessage(msg){
     document.getElementById("message").innerText = msg;
 }
 function nextMove(square) {
-    if(square.innerText == '') {
+    if (winner != null){
+        setMessage(turn + " already won.")
+    }else if(square.innerText == '') {
         square.innerText = turn;
         switchTurn();
     }
@@ -24,6 +27,7 @@ function switchTurn() {
     }else if(turn == "X") {
     turn = "0";
     setMessage("It's " + turn + "' turn")
+    winner = turn;
 }
 else {
     turn = "X";
