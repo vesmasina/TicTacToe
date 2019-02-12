@@ -6,6 +6,7 @@
     <title>Tic Tac Toe</title>
     <link rel="stylesheet" type="text/css" href="./styles.css">
     <script src="./tic-tac-toe.js"></script>
+    <link rel="stylesheet" type="text/css" href="csshake.min.css">
 </head>
 
 <body onload="startGame();">
@@ -27,8 +28,10 @@
         <td class="Square" id="s8" onclick="nextMove(this)"></td>
         <td class="Square" id="s9" onclick="nextMove(this)"></td>
     </tr>
-</table>
-<button class="button">"Replay"</button>
+
+
+<button class="button" onclick="clearBox()">"Replay"</button>
+
 </body>
 
 </html>

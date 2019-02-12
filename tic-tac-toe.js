@@ -1,6 +1,8 @@
 let turn = "X";
 let result = false;
 winner = null;
+let button = document.getElementsByClassName("Button");
+
 
 function startGame() {
   setMessage(turn + " Gets to start");
@@ -54,4 +56,13 @@ function checkRow(a, b, c, move) {
 
 function getBox(number) {
   return document.getElementById("s" + number).innerText;
+}
+
+function clearBox() {
+   button.onclick = function(square){
+    for(square = 0; square < 9; square++)
+    { 
+        return square = " ";
+    }
+};
 }
